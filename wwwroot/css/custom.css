@@ -1,0 +1,6 @@
+﻿#photo {
+    width: 375px;
+    height: 375px;
+    border-radius: 50%;
+    border: 2px solid black;
+}
