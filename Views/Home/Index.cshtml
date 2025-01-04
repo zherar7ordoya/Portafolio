@@ -1,14 +1,11 @@
-﻿@{
+﻿@model HomeIndexViewModel
+
+@{
     ViewData["Title"] = "Bienvenido";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Gerardo Tordoya</h1>
-    <h2 class="display-5">Analista Programador</h2>
+<partial name="_Presentacion" />
 
-    <img id="photo"
-         src="~/images/gerardo.jpg" 
-         class="img-fluid"
-         alt="Gerardo Tordoya" />
+<partial name="_Habilidades" />
 
-</div>
+<partial name="_Proyectos" model="@Model.Proyectos" />

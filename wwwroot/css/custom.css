@@ -1,6 +1,49 @@
 ﻿#photo {
-    width: 375px;
-    height: 375px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     border: 2px solid black;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
+
+#fecha{
+    margin: 40px;
+}
+
+.seccion-bienvenida{
+    margin: 3rem 0 6rem 0;
+    color: white;
+}
+
+.seccion-bienvenida h1{
+    margin-bottom: 2rem;
+}
+
+.seccion-bienvenida p{
+    font-family: sans-serif;
+    line-height: 1.5;
+    font-size: 1.25rem;
+}
+
+#imagen-dotnet {
+    width: 250px;
+}
+
+.cabecera {
+    background-color: lawngreen;
+    color: white;
+    font-weight: bold;
+}
+
+.habilidades ul{
+    list-style: none;
+    padding-left: 0;
+}
+
+#icono,
+.habilidades i{
+    font-size: 4rem;
+    color: darkred;
+}
+

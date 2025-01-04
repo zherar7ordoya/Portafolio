@@ -1,0 +1,85 @@
+﻿@*
+    Comentario: Vista parcial. Presentación de la página de inicio.
+*@
+
+@{
+    var persona = new Persona { Nombre = "Ana de Armas", Edad = 33, Titulo = "Analista Programador" };
+
+    string DevolverFecha()
+    {
+        var fecha = DateTime.Now;
+        return fecha.ToLongDateString();
+    }
+
+    var aficiones = new List<string> { "Cine", "Música", "Deportes", "Viajar" };
+}
+
+<div class="text-center">
+
+    <i id="icono" class="bi bi-heart-fill"></i>
+
+    <!-- El dato "per se" -->
+    <h1 class="display-4">@persona.Nombre</h1>
+    <h2 class="display-5">@persona.Titulo</h2>
+    <strong id="fecha">Hoy es @DevolverFecha()</strong>
+
+    @if (persona.Edad < 18)
+    {
+        <br />
+        <h4>Too young!</h4>
+        <br />
+    }
+    else
+    {
+        <br />
+        <button>Entra, mi amor ❤️</button>
+        <br />
+    }
+
+    <img id="photo"
+         src="~/images/ana.png"
+         class="img-fluid"
+         alt="Ana de Armas" />
+
+    @foreach (var aficion in aficiones)
+    {
+        <p>@aficion</p>
+    }
+
+</div>
+
+<div class="text-center">
+    <img id="imagen-dotnet"
+         src="~/images/dotnet.png"
+         class="img-fluid" alt="C#" />
+</div>
+
+<div class="row justify-content-center text-center bg-primary">
+
+    <div class="col col-md-7 seccion-bienvenida">
+
+        <h1>Bienvenido a mi portafolio</h1>
+        <p>
+            Ana Celia de Armas Caso (La Habana, 30 de abril de 1988) es una
+            actriz y modelo cubana nacionalizada española​ y estadounidense.
+            Comenzó su carrera con 16 años en su país natal y pronto obtuvo
+            un papel principal en el drama romántico hispanocubano "Una rosa
+            de Francia" (2006). A la edad de 18 años, se mudó a Madrid y
+            protagonizó series como la popular serie de suspenso "El internado"
+            (2007-2010) y el drama histórico "Hispania, la leyenda" (2010-2012).
+        </p>
+        <p>
+            Después de mudarse a Los Ángeles, De Armas tuvo papeles de habla
+            inglesa en el thriller psicológico "Knock Knock" (2015), la
+            comedia criminal "War Dogs" (2016), y tuvo un papel secundario en
+            la película biográfica "Manos de piedra" (2016). Saltó a la fama
+            con su papel de Joi, una proyección holográfica de IA en la película
+            de ciencia ficción "Blade Runner 2049" (2017). Por su interpretación
+            de la enfermera Marta Cabrera en la película de misterio "Knives
+            Out" (2019), fue nominada al Globo de Oro a la mejor actriz de
+            comedia o musical.
+        </p>
+
+    </div>
+
+</div>
