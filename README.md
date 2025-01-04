@@ -1,2 +1,5 @@
 # Portafolio
- Curso de ASP.NET Core (no es real)
+ 
+ Es un curso de ASP.NET Core.
+ 
+El portafolio no es real, es ficticio.
