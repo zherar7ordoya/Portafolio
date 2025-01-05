@@ -27,7 +27,28 @@ namespace Portafolio.Services
                     Descripcion = "Pequeños experimentos con diferentes lenguajes",
                     ImagenURL = "https://raw.githubusercontent.com/zherar7ordoya/Xperiments/refs/heads/main/xperiments.jpg",
                     Link = "https://github.com/zherar7ordoya/Xperiments"
-                }
+                },
+                new ()
+                {
+                    Titulo = "Portafolio",
+                    Descripcion = "Proyecto de portafolio personal",
+                    ImagenURL = "https://raw.githubusercontent.com/zherar7ordoya/Portafolio/refs/heads/main/portafolio.jpg",
+                    Link = "https://github.com/zherar7ordoya/Xperiments"
+                },
+                new ()
+                {
+                    Titulo = "Portafolio",
+                    Descripcion = "Proyecto de portafolio personal",
+                    ImagenURL = "https://raw.githubusercontent.com/zherar7ordoya/Portafolio/refs/heads/main/portafolio.jpg",
+                    Link = "https://github.com/zherar7ordoya/Xperiments"
+                },
+                new ()
+                {
+                    Titulo = "Portafolio",
+                    Descripcion = "Proyecto de portafolio personal",
+                    ImagenURL = "https://raw.githubusercontent.com/zherar7ordoya/Portafolio/refs/heads/main/portafolio.jpg",
+                    Link = "https://github.com/zherar7ordoya/Xperiments"
+                },
             };
 
             return proyectos;

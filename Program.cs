@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.Hosting.StaticWebAssets;
+
 using Portafolio.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -19,6 +21,12 @@ builder.Services.AddControllersWithViews();
  * Se crea una única instancia por aplicación.
  */
 builder.Services.AddTransient<IRepositorioProyectos, RepositorioProyectos>();
+
+// Habilitar los recursos estáticos
+StaticWebAssetsLoader.UseStaticWebAssets(
+    builder.Environment,
+    builder.Configuration
+);
 
 // Construir la aplicación.-....................................................
 var app = builder.Build();
