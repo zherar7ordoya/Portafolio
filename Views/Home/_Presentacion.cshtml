@@ -14,46 +14,66 @@
     var aficiones = new List<string> { "Cine", "Música", "Deportes", "Viajar" };
 }
 
+
+<!-- Contenido principal -->
 <div class="text-center">
 
-    <i id="icono" class="bi bi-heart-fill"></i>
+    <!-- Ícono -->
+    <i id="icono" class="bi bi-heart-fill display-3 text-danger mb-4"></i>
 
-    <!-- El dato "per se" -->
-    <h1 class="display-4">@persona.Nombre</h1>
-    <h2 class="display-5">@persona.Titulo</h2>
-    <strong id="fecha">Hoy es @DevolverFecha()</strong>
+    <!-- Contenido principal -->
+    <div class="container py-4 border rounded shadow-sm">
+        <!-- Título principal -->
+        <h1 class="display-4 text-center">@persona.Nombre</h1>
+        <!-- Subtítulo -->
+        <h2 class="display-5 text-center text-muted">@persona.Titulo</h2>
+        <!-- Fecha -->
+        <p class="text-center mt-3">
+            <strong id="fecha">Hoy es @DevolverFecha()</strong>
+        </p>
+        <!-- Acceso basado en la edad -->
+        @if (persona.Edad < 18)
+        {
+            <div class="alert alert-danger text-center my-4">
+                <h4>Acceso denegado ❌</h4>
+            </div>
+        }
+        else
+        {
+            <div class="text-center my-4">
+                <button class="btn btn-success btn-lg">Acceso permitido ✨</button>
+            </div>
+        }
+    </div>
 
-    @if (persona.Edad < 18)
-    {
-        <br />
-        <h4>Too young!</h4>
-        <br />
-    }
-    else
-    {
-        <br />
-        <button>Entra, mi amor ❤️</button>
-        <br />
-    }
+    <!-- Imagen principal -->
+    <div class="my-4">
+        <img id="photo"
+             src="~/images/ana.png"
+             class="img-fluid rounded shadow-lg"
+             alt="Ana de Armas" />
+    </div>
 
-    <img id="photo"
-         src="~/images/ana.png"
-         class="img-fluid"
-         alt="Ana de Armas" />
-
-    @foreach (var aficion in aficiones)
-    {
-        <p>@aficion</p>
-    }
-
+    <!-- Lista de aficiones -->
+    <div class="container">
+        @foreach (var aficion in aficiones)
+        {
+            <p class="text-center mb-1">@aficion</p>
+        }
+    </div>
 </div>
 
-<div class="text-center">
+
+<!-- Imagen adicional -->
+<div class="text-center my-5">
     <img id="imagen-dotnet"
          src="~/images/dotnet.png"
-         class="img-fluid" alt="C#" />
+         class="img-fluid rounded"
+         alt="C#" />
 </div>
 
+
+<!-- Sección de bienvenida -->
 <div class="row justify-content-center text-center bg-primary">
 
     <div class="col col-md-7 seccion-bienvenida">
