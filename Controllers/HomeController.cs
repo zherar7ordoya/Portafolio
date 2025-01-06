@@ -1,15 +1,18 @@
 using System.Diagnostics;
+
 using Microsoft.AspNetCore.Mvc;
+
 using Portafolio.Models;
 using Portafolio.Services;
 
 namespace Portafolio.Controllers
 {
-    public class HomeController(ILogger<HomeController> logger, IRepositorioProyectos repositorio, IConfiguration config) : Controller
+    public class HomeController(ILogger<HomeController> logger, IRepositorioProyectos repositorio, IConfiguration config, IServicioEmail email) : Controller
     {
         private readonly ILogger<HomeController> _logger = logger;
         private readonly IRepositorioProyectos _repositorio = repositorio;
         private readonly IConfiguration _config = config;
+        private readonly IServicioEmail _email = email;
 
         // Acciones de controlador..............................................
 
@@ -37,6 +40,24 @@ namespace Portafolio.Controllers
         {
             var proyectos = _repositorio.ObtenerProyectos();
             return View(proyectos);
+        }
+
+        [HttpGet]
+        public IActionResult Contacto()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Contacto(ContactoViewModel contacto)
+        {
+            await _email.EnviarCorreo(contacto);
+            return RedirectToAction("Gracias");
+        }
+
+        public IActionResult Gracias()
+        {
+            return View();
         }
 
         //......................................................................

@@ -1,0 +1,41 @@
+﻿@*
+    Video 63
+*@
+@{
+    ViewData["Title"] = "Contacto";
+}
+
+<!-- Usé d-flex justify-content-center en el contenedor principal para centrar la tarjeta horizontalmente en la página. -->
+<div class="container my-5 d-flex justify-content-center">
+
+    <!-- La clase shadow-sm le da una ligera sombra a la tarjeta para mejorar la estética. -->
+    <!-- Usé max-width: 600px para limitar el ancho máximo y que sea más compacto. -->
+    <!-- Usé width: 100% para asegurarme de que la tarjeta sea responsive y se ajuste en dispositivos más pequeños, pero no supere los 600px de ancho. -->
+    <div class="card shadow-sm" style="max-width: 600px; width: 100%;">
+
+        <!-- Agregué un <div class="card"> alrededor del formulario para que quede contenido en un diseño elegante. -->
+        <div class="card-body">
+            <h1 class="text-center mb-4">Contacto</h1>
+
+            <form asp-controller="Home" asp-action="Contacto">
+                <div class="mb-3">
+                    <!-- <!-- For="nombre" de label se conecta con id="nombre" de input (si hago click en label, me manda al textbox). -->
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Gerardo Tordoya" />
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Gerardo.Tordoya@Outlook.Com" />
+                </div>
+                <div class="mb-3">
+                    <label for="mensaje" class="form-label">Mensaje</label>
+                    <textarea class="form-control" id="mensaje" name="mensaje" rows="3"></textarea>
+                </div>
+
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

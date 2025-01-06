@@ -21,6 +21,7 @@ builder.Services.AddControllersWithViews();
  * Se crea una única instancia por aplicación.
  */
 builder.Services.AddTransient<IRepositorioProyectos, RepositorioProyectos>();
+builder.Services.AddTransient<IServicioEmail, ServicioEmail>();
 
 // Habilitar los recursos estáticos
 StaticWebAssetsLoader.UseStaticWebAssets(
