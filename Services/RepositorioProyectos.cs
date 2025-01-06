@@ -30,25 +30,25 @@ namespace Portafolio.Services
                 },
                 new ()
                 {
-                    Titulo = "Portafolio",
-                    Descripcion = "Proyecto de portafolio personal",
-                    ImagenURL = "https://raw.githubusercontent.com/zherar7ordoya/Portafolio/refs/heads/main/portafolio.jpg",
-                    Link = "https://github.com/zherar7ordoya/Xperiments"
+                    Titulo = "SocialPreview",
+                    Descripcion = "Generardor en Python (Pillow) para generar las imágenes de 1280x640px que pide GitHub para la SocialPreview de los repositorios.",
+                    Link = "https://github.com/zherar7ordoya/SocialPreview",
+                    ImagenURL = "https://raw.githubusercontent.com/zherar7ordoya/SocialPreview/refs/heads/main/assets/python.png"
                 },
                 new ()
                 {
-                    Titulo = "Portafolio",
-                    Descripcion = "Proyecto de portafolio personal",
-                    ImagenURL = "https://raw.githubusercontent.com/zherar7ordoya/Portafolio/refs/heads/main/portafolio.jpg",
-                    Link = "https://github.com/zherar7ordoya/Xperiments"
+                    Titulo = "ModernWeb",
+                    Descripcion = "Mark Price - C# 13 and .NET 9.",
+                    Link = "https://github.com/zherar7ordoya/ModernWeb",
+                    ImagenURL = "https://raw.githubusercontent.com/zherar7ordoya/ModernWeb/refs/heads/main/assets/web.jpeg"
                 },
                 new ()
                 {
-                    Titulo = "Portafolio",
-                    Descripcion = "Proyecto de portafolio personal",
-                    ImagenURL = "https://raw.githubusercontent.com/zherar7ordoya/Portafolio/refs/heads/main/portafolio.jpg",
-                    Link = "https://github.com/zherar7ordoya/Xperiments"
-                },
+                    Titulo = "Gerardo Tordoya",
+                    Descripcion = "zherar7ordoya/zherar7ordoya is a special repository. Its README.md will appear on your public profile.",
+                    Link = "https://github.com/zherar7ordoya/zherar7ordoya",
+                    ImagenURL = "https://raw.githubusercontent.com/zherar7ordoya/zherar7ordoya/refs/heads/main/assets/top-gun.jpg"
+                }
             };
 
             return proyectos;
